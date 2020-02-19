@@ -1,6 +1,6 @@
 <head>
     <title>Gattic gfx++</title>
-    <!-- Bootstrap 4.0.0 -->
+    <!-- Bootstrap 4.3.1 -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Font Awesome 5 -->
@@ -11,56 +11,37 @@
 
 <style type="text/css">
 
-    @import url('https://fonts.googleapis.com/css?family=Audiowide');
-
     a {
         color: #212529;
     }
 
-    ul {
-        text-align: center;
-        padding-top: 20px;
-        height: 60px;
-        width: 100%;
-        border-bottom: #444444 1px solid;
+    p a {
+        text-decoration: underline;
     }
 
-    ul li {
-        display: inline;
-        padding-right: 15px;
-        float: left;
-    }
-
-    ul div {
-        font-family: 'Audiowide', cursive;
-        padding: 0;
-        margin: 0;
-        float: right;
-    }
-
-    ul li a {
-        text-decoration: none;
-        color: black;
-    }
-
-    ul li a:hover {
-        color: #00c3ff;
-        text-decoration: none;
+    p, h5 {
+        padding-left: 20px;
     }
 
     body {
-        margin-left: 42px;
-        margin-right: 42px;
+        color: #343a40;
+    }
+
+    footer {
+        background-color: #343a40;
+        height: 10vh;
+        color: #fff;
+        padding: 0;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
     }
 
     .head {
         margin-bottom: 25px;
-    }
-
-    .foot {
-        padding-top: 5px;
-        border-top: dotted 1px black;
-        text-align: center;
     }
 
     .profile-pic {
@@ -89,68 +70,146 @@
 
     .content {
         padding: 20px;
+        margin-top: 100px;
     }
+
+    .navbar-dark .navbar-nav .nav-link {
+        color: #FFF;
+    }
+
+    pre.prettyprint {
+        border: none !important;
+        text-align: left;
+    }
+
+    .padding-left-20 {
+        padding-left: 20px;
+    }
+
 </style>
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">gfx++</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/MeeseeksLookAtMe/gfxplusplus">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/MeeseeksLookAtMe/gfxplusplus/blob/master/DOCUMENTATION.md">Docs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.gg/4DN2WMm">Discord</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <body>
-    <ul>
-        <!--<li><a class="active" href="#">Home</a></li>-->
-        <div>Gattic</div>
-    </ul>
 
     <div class="main-color">
         <div class="content">
             <h1 class="head">gfx++</h1>
-            <p>Open source. Lightweight, portable and fast frontend application framework made with C++ and SDL2. 2D GUI graphics library. Experimental 3D library. </p>
-            <button class="btn btn-success"><i class="fas fa-download"></i> Download</button>
-            <button class="btn btn-secondary"><i class="fab fa-github"></i> View on GitHub</button>
+            <p>Open source. Lightweight, portable and fast frontend application framework made with C++ and SDL2. 2D GUI graphics library. Experimental 3D library. Powerful and easy to use. </p>
+            <button class="btn btn-secondary" onclick="window.location.href = 'https://github.com/MeeseeksLookAtMe/gfxplusplus';"><i class="fab fa-github"></i>&nbsp;&nbsp;View on GitHub</button>
+            <button class="btn btn-success" onclick="window.location.href = 'https://github.com/MeeseeksLookAtMe/';"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;Get Started</button>
         </div>
     </div>
 
     <div class="main">
+
         <div class="row">
             <div class="col-sm">
-                <h2>Example 1 Code</h2>
-                <p class="lead">Description.</p>
+                <i class="far fa-check-square fa-4x"></i>
+                <h2>UI Components</h2>
+                <p class="lead">button, label, linear layout, text field, dropdown, listbox, image, checkbox, message box, progress bar, scrollbar, tabs, table, and a global color palette). Backgrounds, borders and padding. Positioning with Cartesian coordinates (x/y) and scaling with width and height. Padding and layouts make it simple to prototype application interfaces. Perfect boilerplate code for a new desktop application.</p>
             </div>
             <div class="col-sm">
-                <h2>Example 1 Image</h2>
-                <p class="lead">Description.</p>
+                <i class="fas fa-chart-line fa-4x"></i>
+                <h2>Linear Graphing</h2>
+                <p class="lead">Static & Realtime</p>
             </div>
         </div>
-
-        <h1>Developers & Maintainers</h1>
+        <div class="row">
+            <div class="col-sm">
+                <i class="far fa-keyboard fa-4x"></i>
+                <h2>GUI Event Handling</h2>
+                <p class="lead">(list all mini comps) KeyDown, KeyUp, LoseFocus, MouseDown, MouseUp, MouseMotion, MouseWheel. Manage these events with ease using GItem and GuiCommanders.</p>
+            </div>
+            <div class="col-sm">
+                <i class="fas fa-cubes fa-4x"></i>
+                <h2>3D (Experimental)</h2>
+                <p class="lead">Render colored 3D objects (untextured). Right click to rotate camera and scroll to zoom.</p>
+            </div>
+        </div>
         <br />
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="profiles">
-                        <img src="img/team/robert.jpeg" width="216" height="270">
-                        <h3>Robert Carneiro</h3>
-                        <h5>GFX Wizard</h5>
-                        <h5>
-                            <a href="https://github.com/cabral450" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="profiles">
-                        <img src="img/team/eric.jpeg" width="216" height="270">
-                        <h3>Eric Lujan</h3>
-                        <h5>GFX Wizard</h5>
-                        <h5>
-                            <a href="https://github.com/EricLujan" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </h5>
-                    </div>
-                </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <h2>Code Sample</h2>
+                <br />
+                <pre class="prettyprint">
+                    // Linear Layout    
+                    GLinearLayout* netNameLayout = new GLinearLayout("netNameLayout");
+                    netNameLayout->setOrientation(GLinearLayout::HORIZONTAL);
+                    leftSideLayout->addSubItem(netNameLayout);
+
+                    // Load button
+                    RUButton* btnLoad = new RUButton();
+                    btnLoad->setWidth(200);
+                    btnLoad->setHeight(30);
+                    btnLoad->setText("Reload Network List");
+                    btnLoad->setMouseDownListener(&GPanel::GuiCommander10);
+                    btnLoad->setName("btnLoad");
+                    loadNetLayout->addSubItem(btnLoad);
+                </pre>
+            </div>
+            <div class="col-sm">
+                <h2>Build Example</h2>
+                <br />
+                <img src="img/NNCreator.png" width="650" />
+            </div>
+        </div>
+        <br /><br />
+
+        <h1>Performance</h1>
+        <p class="lead">Minimal Footprint. Boilerplate graphics solution for any application.</p>
+
+        <br />
+        <div class="row">
+            <div class="col-sm">
+                <!-- TODO: Insert image -->
+                <img src="img/specs.png" width="650" />
+            </div>
+            <div class="col-sm">
+                <img src="img/performance.png" width="650" />
             </div>
         </div>
     </div>
 
-    <div class="foot"><h6><i class="fas fa-copyright"></i> <strong>Gattic Inc.</strong></h6></div>
+        <br />
+        <div class="row">
+            <div class="col-sm">
+                <h5>Join the Community</h5>
+                <hr>
+                <p class="lead">Real-time help? Find us on <a href="https://discord.gg/4DN2WMm" target="_blank">Discord</a>.</p>
+            </div>
+            <div class="col-sm">
+                <h5>Contribute</h5>
+                <hr>
+                <p class="lead">Contribute code or report issues on <a href="https://github.com/MeeseeksLookAtMe/gfxplusplus" target="_blank">GitHub</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <i class="fas fa-copyright"></i> Gattic Inc.
+    </footer>
 
 </body>
