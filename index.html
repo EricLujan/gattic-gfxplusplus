@@ -116,9 +116,18 @@
     <div class="main-color">
         <div class="content">
             <h1 class="head">gfx++</h1>
-            <p>Open source. Lightweight, portable and fast frontend application framework made with C++ and SDL2. 2D GUI graphics library. Experimental 3D library. Powerful and easy to use. </p>
+            <p>
+                Gfx++ ("graphics plus plus") is a lightweight, portable and fast frontend application framework made with C++ and SDL2.
+            </p>
+            <p>
+                Build custom GUIs for any application. Our Cartesian coordinate-based layout system allows for simple positioning and scaling of components in a window. Experiment with our 3D environment for rendering data / objects in 3D space. Powerful and easy to use tools make gfx++ a strong foundation for any desktop application, optimized for the most CPU-intensive operations.
+            </p>
+            <div class="alert alert-info">
+                <strong>Note:</strong> Compatible with Linux. Untested on Windows and macOS.
+            </div>
+            
             <button class="btn btn-secondary" onclick="window.location.href = 'https://github.com/MeeseeksLookAtMe/gfxplusplus';"><i class="fab fa-github"></i>&nbsp;&nbsp;View on GitHub</button>
-            <button class="btn btn-success" onclick="window.location.href = 'https://github.com/MeeseeksLookAtMe/';"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;Get Started</button>
+            <button class="btn btn-success" onclick="window.location.href = 'https://github.com/MeeseeksLookAtMe/gfxplusplus/blob/master/INSTALL.md';"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;Get Started</button>
         </div>
     </div>
 
@@ -128,19 +137,25 @@
             <div class="col-sm">
                 <i class="far fa-check-square fa-4x"></i>
                 <h2>UI Components</h2>
-                <p class="lead">button, label, linear layout, text field, dropdown, listbox, image, checkbox, message box, progress bar, scrollbar, tabs, table, and a global color palette). Backgrounds, borders and padding. Positioning with Cartesian coordinates (x/y) and scaling with width and height. Padding and layouts make it simple to prototype application interfaces. Perfect boilerplate code for a new desktop application.</p>
+                <p class="lead">
+                    Create custom application GUIs using any of these components: button, label, layout, text field, dropdown, listbox, image, checkbox, message box, progress bar, scrollbar, tabs, table, and a global color palette. Each component has a customizable border, background and padding.
+                </p>
             </div>
             <div class="col-sm">
                 <i class="fas fa-chart-line fa-4x"></i>
                 <h2>Linear Graphing</h2>
-                <p class="lead">Static & Realtime</p>
+                <p class="lead">
+                    Plot linear data in static and real-time graphs. Multiline / multiplot graphing is also supported and optimized for big data operations.
+                </p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
                 <i class="far fa-keyboard fa-4x"></i>
                 <h2>GUI Event Handling</h2>
-                <p class="lead">(list all mini comps) KeyDown, KeyUp, LoseFocus, MouseDown, MouseUp, MouseMotion, MouseWheel. Manage these events with ease using GItem and GuiCommanders.</p>
+                <p class="lead">
+                    Manage keyboard and mouse events with ease using GItem (GUI items) and GuiCommanders (actions). Polymorphic mini components allow for fast tracking and responding to any event.
+                </p>
             </div>
             <div class="col-sm">
                 <i class="fas fa-cubes fa-4x"></i>
@@ -164,10 +179,17 @@
                     RUButton* btnLoad = new RUButton();
                     btnLoad->setWidth(200);
                     btnLoad->setHeight(30);
-                    btnLoad->setText("Reload Network List");
+                    btnLoad->setText("Reload List");
                     btnLoad->setMouseDownListener(&GPanel::GuiCommander10);
                     btnLoad->setName("btnLoad");
                     loadNetLayout->addSubItem(btnLoad);
+
+                    ...
+
+                    void NNCreatorPanel::GuiCommander10(const std::string& cmpName, int x, int y)
+                    {
+	                    loadDDNN();
+                    }
                 </pre>
             </div>
             <div class="col-sm">
